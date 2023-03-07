@@ -87,3 +87,12 @@ function updateWish() {
   // change the text content of the button since we have a name now
   button.innerText = "Change"
 }
+
+const counter = document.getElementById('counter');
+      const button = document.getElementById('clickButton');
+      let count = 0;
+
+      button.onclick = function() {
+        count++;
+        counter.innerText = count;
+      };
