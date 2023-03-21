@@ -1,4 +1,3 @@
-
 /* CONSTANTS AND GLOBALS */
 const width = window.innerWidth * 0.7;
 const height = 600;
