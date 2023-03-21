@@ -41,7 +41,27 @@ d3.json("../data/IceSales.json", d3.autoType).then(data => {
     .attr("transform", `translate(${margin.left},0)`)
     .call(yAxis);
 
-  // circles
+// x-axis title
+  svg.append("text")
+    .attr("class", "xAxisLabel")
+    .attr("y", 440 )
+    .attr("x", width/1.5)
+    .text("Ice Cream Sales")
+    .attr("fill", "black")
+    .attr("text-anchor", "end")
+
+// y-axis title
+  svg.append("text")
+    .attr("class", "yAxisLabel")
+    .attr("y", 12)
+    .attr("x", 0 - height/2.5)
+    .attr("transform", "rotate(-90)")
+    .text("Tempurate (°F)")
+    .attr("fill", "black")
+    .attr("text-anchor", "middle")
+
+
+// circles
   const dot = svg
     .selectAll("circle")
     .data(data, d => d.BioID) // second argument is the unique key for that row

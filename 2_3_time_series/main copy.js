@@ -49,13 +49,8 @@ d3.csv('../data/NYpopulationOverTime.csv', d => {
 
  xAxisGroup.append("text")
    .attr("class", 'xLabel')
+   .attr("transform", `translate(${width / 2}, ${35})`)
    .text("Year")
-   .attr("text-anchor", "end")
-   .attr("y", 30)
-   .attr("x", width/2)
-   .attr("dy", ".75em")
-   .style("font-size", "1.5em")
-   .attr("fill", "black")
 
  const yAxis = d3.axisLeft(yScale)
    .tickFormat(formatBillions)
@@ -67,13 +62,9 @@ d3.csv('../data/NYpopulationOverTime.csv', d => {
 
  yAxisGroup.append("text")
    .attr("class", 'yLabel')
-   .attr("y", -40)
-   .attr("x", 0 - height/2)
-   .attr("transform", "rotate(-90)")
+   .attr("transform", `translate(${-45}, ${height / 2})`)
+   .attr("writing-mode", 'vertical-rl')
    .text("Population")
-   .attr("fill", "black")
-   .attr("text-anchor", "middle")
-   .style("font-size", "1.5em")
 
  // LINE GENERATOR FUNCTION
  const lineGen = d3.line()
@@ -89,17 +80,16 @@ d3.csv('../data/NYpopulationOverTime.csv', d => {
    .attr("stroke", "black")
    .attr("d", d => lineGen(d))
 
+    // Add the area
+    svg.append("path")
+      .datum(data)
+      .attr("fill", "#cce5df")
+      .attr("stroke", "#69b3a2")
+      .attr("stroke-width", 1.5)
+      .attr("d", d3.area()
+        .x(function(d) { return x(d.year) })
+        .y0(y(0))
+        .y1(function(d) { return y(d.population) })
+        )
 
-  const area = d3.area()
-   .x(d => xScale(d.year))
-   .y1(d => yScale(+d.population)) // Convert population to a number
-   .y0(yScale(0))
- 
- // DRAW AREA
- svg.append("path")
-   .data([data]) // data needs to take an []
-   .attr("class", "area")
-   .attr("fill", "rgba(255, 0, 0, 0.5)")
-   .attr("stroke", "black")
-   .attr("d", d => area(d))
 });
