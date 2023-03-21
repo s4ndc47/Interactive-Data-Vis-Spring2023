@@ -1,59 +1,54 @@
 /* CONSTANTS AND GLOBALS */
-// const width = ,
-//   height = ,
-//   margin = ,
-//   radius = ;
+const width = window.innerWidth * 0.7,
+  height = window.innerHeight * 0.7,
+  margin = { top: 40, bottom: 100, left: 60, right: 40 },
+  radius = 5;
 
 /* LOAD DATA */
-d3.csv("[.../data/squirrelActivities.csv]", d3.autoType)
-  .then(data => {
-    console.log(data)
+d3.json("../data/IceSales.json", d3.autoType).then(data => {
+  console.log(data)
 
-    // create SVG
-    const svg = d3.select("#container")
-      .append('svg')
-      .attr("width", width)
-      .attr("height", height)
+  /* SCALES */
+  // xscale  - linear,count
+  const xScale = d3.scaleLinear()
+    .domain([0, d3.max(data.map(d => d.IceCreamSales))])
+    .range([margin.left, width - margin.right])
 
-    //* SCALES */
-    // x scale
-    const xScale = d3.scaleBand()
-      .domain(['running','chasing','climbing','eating','foraging']) // data values
-      .range(0, width) // pixel values
-      .padding(0.1)
-    // 
-    const mapped = [...data.map((d => d.count))]
-    console.log('mapped',mapped)
-    const extent = d3.extent(mapped)
-    console.log(extent)
+    // yscale - linear,count
+  const yScale = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.TemperatureScore)])
+    .range([height - margin.bottom, margin.top])
 
-  // y scale
-  const yScale = d3.scaleLiner()
-    .domain([0, Math.max(...data.map(d => d.count))]) 
-    .range(height, 0)
+  const colorScale = d3.scaleOrdinal()
+    .domain(["Mango", "Strawberry"])
+    .range(["orange", "pink"])
 
-  /* HTML Elements */
-  // append rectanglea
-    svg.selectAll("rect.bar")
-      .data(data)
-      .join("rect")
-      .attr("class","bar")
-      //make them visible)
-      .attr("x", d => xScale(d.activity))
-      .attr("y", d => yScale(d.count))
-      // width and height
-      .attr("weidth", 100)
-      .attr("height", d => height - yScale(d.count))
+  /* HTML ELEMENTS */
+  // svg
+  const svg = d3.select("#container")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height)
 
-      /* Axes */
-      const xAxis = d3.axisBottom(xScale)
-      console.log(xAxis)
-      const yAxis = d3.axisLeft(yScale)
+  // axis scales
+  const xAxis = d3.axisBottom(xScale)
+  svg.append("g")
+  .attr("transform", `translate(0,${height - margin.bottom})`)
+  .call(xAxis);
+  
+  const yAxis = d3.axisLeft(yScale)
+  svg.append("g")
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(yAxis);
 
-      svg.append("g")
-        .call(xAxis)
+  // circles
+  const dot = svg
+    .selectAll("circle")
+    .data(data, d => d.BioID) // second argument is the unique key for that row
+    .join("circle")
+    .attr("cx", d => xScale(d.IceCreamSales))
+    .attr("cy", d => yScale(d.Temperature))
+    .attr("r", radius)
+    .attr("fill", d => colorScale(d.Flavor))
 
-      svg.append("g")
-        .call(yAxis)
-
- });
+});

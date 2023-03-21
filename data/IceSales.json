@@ -1,0 +1,120 @@
+[
+{
+"Flavor": "Mango",
+"BioID": "ICE001",
+"IceCreamSales": 215,
+"Temperature": 14.2,
+"TemperatureScore": 14.2
+},
+
+{
+"Flavor": "Strawberry",
+"BioID": "ICE002",
+"IceCreamSales": 325,
+"Temperature": 16.4,
+"TemperatureScore": 16.4
+},
+
+{
+"Flavor": "Strawberry",
+"BioID": "ICE003",
+"IceCreamSales": 185,
+"Temperature": 11.9,
+"TemperatureScore": 11.9
+},
+
+{
+"Flavor": "Mango",
+"BioID": "ICE004",
+"IceCreamSales": 332,
+"Temperature": 15.2,
+"TemperatureScore": 15.2
+},
+
+{
+"Flavor": "Mango",
+"BioID": "ICE005",
+"IceCreamSales": 406,
+"Temperature": 18.5,
+"TemperatureScore": 18.5
+},
+
+{
+"Flavor": "Mango",
+"BioID": "ICE006",
+"IceCreamSales": 522,
+"Temperature": 22.1,
+"TemperatureScore": 22.1
+},
+
+{
+"Flavor": "Strawberry",
+"BioID": "ICE007",
+"IceCreamSales": 412,
+"Temperature": 19.4,
+"TemperatureScore": 19.4
+},
+{
+"Flavor": "Strawberry",
+"BioID": "ICE008",
+"IceCreamSales": 614,
+"Temperature": 25.1,
+"TemperatureScore": 25.1
+},
+{
+"Flavor": "Mango",
+"BioID": "ICE009",
+"IceCreamSales": 544,
+"Temperature": 23.4,
+"TemperatureScore": 23.4
+},
+{
+"Flavor": "Strawberry",
+"BioID": "ICE010",
+"IceCreamSales": 421,
+"Temperature": 18.1,
+"TemperatureScore": 18.1
+},
+{
+"Flavor": "Strawberry",
+"BioID": "ICE011",
+"IceCreamSales": 445,
+"Temperature": 22.6,
+"TemperatureScore": 22.6
+},
+{
+"Flavor": "Mango",
+"BioID": "ICE012",
+"IceCreamSales": 408,
+"Temperature": 17.2,
+"TemperatureScore": 17.2
+},
+{
+"Flavor": "Mango",
+"BioID": "ICE013",
+"IceCreamSales": 208,
+"Temperature": 13.8,
+"TemperatureScore": 13.8
+},
+{
+"Flavor": "Strawberry",
+"BioID": "ICE014",
+"IceCreamSales": 362,
+"Temperature": 17.9,
+"TemperatureScore": 17.9
+},
+{
+"Flavor": "Strawberry",
+"BioID": "ICE015",
+"IceCreamSales": 478,
+"Temperature": 20.3,
+"TemperatureScore": 20.3
+},
+{
+"Flavor": "Mango",
+"BioID": "ICE016",
+"IceCreamSales": 297,
+"Temperature": 14.5,
+"TemperatureScore": 14.5
+}
+]
