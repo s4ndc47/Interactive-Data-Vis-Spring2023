@@ -29,7 +29,7 @@ let state = {
 
 /* LOAD DATA */
 // + SET YOUR DATA PATH
-d3.csv('../data/populationOverTime.csv', d => {
+d3.csv('../data/HongKongersInUSOver10year.csv', d => {
   // use custom initializer to reformat the data the way we want it
   // ref: https://github.com/d3/d3-fetch#dsv
   return {
@@ -69,7 +69,7 @@ function init() {
   selectElement.selectAll("option")
     .data([
       // manually add the first value
-      "Select a country",
+      "Select a group",
       // add in all the unique values from the dataset
       ...new Set(state.data.map(d => d.country))])
     .join("option")
