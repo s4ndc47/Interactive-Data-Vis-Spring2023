@@ -1,0 +1,61 @@
+Entity,Type,Year,Population
+Population 25 years and over,grey,2011,192030
+Population 25 years and over,grey,2012,199124
+Population 25 years and over,grey,2013,193870
+Population 25 years and over,grey,2014,207988
+Population 25 years and over,grey,2015,215084
+Population 25 years and over,grey,2016,197428
+Population 25 years and over,grey,2017,219998
+Population 25 years and over,grey,2018,220283
+Population 25 years and over,grey,2019,218008
+Population 25 years and over,grey,2021,235509
+Less than high school diploma,#fcebeb,2011,27268
+Less than high school diploma,#fcebeb,2012,28873
+Less than high school diploma,#fcebeb,2013,23846
+Less than high school diploma,#fcebeb,2014,24751
+Less than high school diploma,#fcebeb,2015,27531
+Less than high school diploma,#fcebeb,2016,25666
+Less than high school diploma,#fcebeb,2017,28380
+Less than high school diploma,#fcebeb,2018,25773
+Less than high school diploma,#fcebeb,2019,26161
+Less than high school diploma,#fcebeb,2021,30145
+High school graduate (includes equivalency),#d39797,2011,26692
+High school graduate (includes equivalency),#d39797,2012,27280
+High school graduate (includes equivalency),#d39797,2013,27336
+High school graduate (includes equivalency),#d39797,2014,28494
+High school graduate (includes equivalency),#d39797,2015,30112
+High school graduate (includes equivalency),#d39797,2016,27442
+High school graduate (includes equivalency),#d39797,2017,31020
+High school graduate (includes equivalency),#d39797,2018,31500
+High school graduate (includes equivalency),#d39797,2019,31829
+High school graduate (includes equivalency),#d39797,2021,32265
+Some college or associate's degree,#cc6666,2011,34373
+Some college or associate's degree,#cc6666,2012,35643
+Some college or associate's degree,#cc6666,2013,35478
+Some college or associate's degree,#cc6666,2014,35774
+Some college or associate's degree,#cc6666,2015,39575
+Some college or associate's degree,#cc6666,2016,32970
+Some college or associate's degree,#cc6666,2017,40920
+Some college or associate's degree,#cc6666,2018,40532
+Some college or associate's degree,#cc6666,2019,38151
+Some college or associate's degree,#cc6666,2021,40272
+Bachelor's degree,#ede969,2011,58761
+Bachelor's degree,#ffff99,2012,62724
+Bachelor's degree,#ffff99,2013,63589
+Bachelor's degree,#ffff99,2014,70300
+Bachelor's degree,#ffff99,2015,70332
+Bachelor's degree,#ffff99,2016,65744
+Bachelor's degree,#ffff99,2017,70399
+Bachelor's degree,#ffff99,2018,72253
+Bachelor's degree,#ffff99,2019,71071
+Bachelor's degree,#ffff99,2021,75598
+Graduate or professional degree,#cccc33,2011,44935
+Graduate or professional degree,#cccc33,2012,44604
+Graduate or professional degree,#cccc33,2013,43621
+Graduate or professional degree,#cccc33,2014,48461
+Graduate or professional degree,#cccc33,2015,47534
+Graduate or professional degree,#cccc33,2016,45606
+Graduate or professional degree,#cccc33,2017,49280
+Graduate or professional degree,#cccc33,2018,50445
+Graduate or professional degree,#cccc33,2019,50796
+Graduate or professional degree,#cccc33,2021,57229

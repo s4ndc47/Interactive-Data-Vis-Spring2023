@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Income Gap</title>
+    <link rel="stylesheet" href="./stylep2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+  </head>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <body>
+    <div class="LeftButton">
+      <a href="page1.html">
+        <img src="https://photolibrary.commons.gc.cuny.edu/wp-content/blogs.dir/27109/files/2023/05/Left-1.png" alt="Previous Page" width="19.8" height="30" class="alignleft">
+      </a>
+    </div>
+    <div class="RightButton">
+      <a href="page3.html">
+        <img src="https://photolibrary.commons.gc.cuny.edu/wp-content/blogs.dir/27109/files/2023/05/Right-1.png" alt="Next Page" width="19.8" height="30" class="alignright">
+      </a>
+    </div>
+    <h3>Income of Male and Female Hong Kongers<br />in the U.S. from 2011 to 2021</h3>
+    <p>(USD per person)</p>
+    <p>Hover over the line to see more details</p>
+    <div id="Tips"> <img src="https://photolibrary.commons.gc.cuny.edu/wp-content/blogs.dir/27109/files/2023/05/p2tips@30x.png" alt="Image" width="129" height="60"></div>
+    <div id="container"></div>
+    <div id="BackgroundImage"> <img src="https://photolibrary.commons.gc.cuny.edu/wp-content/blogs.dir/27109/files/2023/05/couple-bnw.png" alt="Image" width="300" height="306"></div>
+    <script src="../lib/d3.js"></script>
+    <script src="p2.js"></script>
+    <div class="tooltip">
+      <div class="tooltip-year"></div>
+      <div class="tooltip-population"></div>
+    </div>
+    <div id="DataSource">
+      <p>Data Source: U.S. Census Bureau, (2011-2021 except 2010).<br />Selected Population Profile "Hong Kong" in the United States.</p>
+    </div>
+   
+  </body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Merriweather:wght@900&display=swap');
+  </style>
+</html>

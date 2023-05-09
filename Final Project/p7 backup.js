@@ -1,7 +1,7 @@
 /* CONSTANTS AND GLOBALS */
-const width = 700,
-  height = 600,
-  margin = { top: (window.innerHeight - height) / 2, bottom: 50, left: 20, right: (window.innerWidth - width) / 2 },
+const width = 800,
+  height = 700,
+  margin = { top: (window.innerHeight - height) / 2, bottom: (window.innerHeight - height) / 2, left: (window.innerWidth - width) / 2, right: (window.innerWidth - width) / 2 },
   radius = 15;
 
 /*
@@ -29,15 +29,17 @@ let state = {
 
 /* LOAD DATA */
 // + SET YOUR DATA PATH
-d3.csv('../data/HongKongersInUSOver10year-color.csv', d => {
+d3.csv('../data/LanguageSpokenAtHome.csv', d => {
   // use custom initializer to reformat the data the way we want it
   // ref: https://github.com/d3/d3-fetch#dsv
   return {
-    year: new Date(+d.Year, 0, 1),
-    country: d.Entity,
+    year: d.Year,
+    group: d.group,
     population: +d.Population,
     color: d.Type
   }
+
+  subgroups = data.columns.slice(1)
 })
   .then(data => {
     console.log("loaded data:", data);
@@ -49,9 +51,11 @@ d3.csv('../data/HongKongersInUSOver10year-color.csv', d => {
 // this will be run *one time* when the data finishes loading in
 function init() {
   // + SCALES
-  xScale = d3.scaleTime()
-    .domain(d3.extent(state.data, d => d.year))
-    .range([margin.right, width - margin.left])
+  xScale = d3.scaleBand()
+    .domain(d3.extent(state.data, d => d.group))
+    .range([0, width])
+    .padding([0.2])
+
 
   yScale = d3.scaleLinear()
     .domain(d3.extent(state.data, d => d.population))
@@ -59,7 +63,7 @@ function init() {
 
   // + AXES
   const xAxis = d3.axisBottom(xScale)
-    .ticks(8) // limit the number of tick marks showing -- note: this is approximate
+    .ticks(6) // limit the number of tick marks showing -- note: this is approximate
   yAxis = d3.axisLeft(yScale)
     .tickFormat(formatBillions)
 
@@ -72,7 +76,7 @@ function init() {
       // manually add the first value
       "Select a group",
       // add in all the unique values from the dataset
-      ...new Set(state.data.map(d => d.country))])
+      ...new Set(state.data.map(d => d.year))])
     .join("option")
     .attr("attr", d => d)
     .text(d => d)
@@ -94,7 +98,6 @@ function init() {
   xAxisGroup = svg.append("g")
     .attr("class", "xAxis")
     .attr("transform", `translate(${0}, ${height - margin.bottom})`)
-    .style("fill", "white")
     .call(xAxis)
 
   xAxisGroup.append("text")
@@ -121,23 +124,15 @@ function init() {
 function draw() {
   // + FILTER DATA BASED ON STATE
   const filteredData = state.data
-    .filter(d => d.country === state.selection)
+    .filter(d => d.group === state.selection)
 
   console.log('filtered data: ' , filteredData)
 
-  const TotalPopulationData = state.data
-    .filter(d => d.country === 'Total Population')
+  // const TotalPopulationData = state.data
+    // .filter(d => d.group === 'Total Population')
 
-  console.log('TotalPopulation:' , TotalPopulationData)
+  // console.log('TotalPopulation:' , TotalPopulationData)
 
-  const tooltip = d3.select(".tooltip");
-
-  const types = {
-    click: "Click",
-    hover: "Hover",
-    mouseover: "Mouseover" // add mouseover type
-  };
-  
 
   // + UPDATE SCALE(S), if needed
   yScale.domain([0, d3.max(filteredData, d => d.population)])
@@ -149,14 +144,10 @@ function draw() {
 
   // specify line generator function
   const lineGen = d3.line()
-    .x(d => xScale(d.year))
+    .x(d => xScale(d.group))
     .y(d => yScale(d.population))
 
-  const dot = svg.append("circle")
-    .attr("r", 8)
-    .attr("fill", "black")
-    .style("display", "none");
-
+    
   // + DRAW LINE 
   svg.selectAll(".line")
     .data([filteredData])
@@ -165,46 +156,9 @@ function draw() {
     .attr("fill", "none")
     .attr("stroke-width", 3)
     .attr("stroke", filteredData[0].color)
-    .on("mouseover", (event, d) => {
-      console.log(d)
-      const [x, y] = d3.pointer(event);
-      console.log(event)
-      const population = yScale.invert(y)
-      const year = xScale.invert(x)
-      tooltip
-        .html(`${Math.round(population)}`)
-        .style("display", "block")
-        .style("left",`${event.pageX + 10}px`)
-        .style("top",`${event.pageY - 20}px`)
-      dot
-        .attr("cx", x)
-        .attr("cy", y)
-        .style("display", "block");
-    })
-    .on("mouseout", () => {
-      tooltip.style("display", "none");
-      dot.style("display", "none");
-    })
-    .transition()
-    .duration(1000)
     .attr("d", d => lineGen(d))
 
 
-  // + DRAW AREA
-  svg.selectAll(".area")
-    .data([filteredData])
-    .join("path")
-    .attr("class", 'area')
-    .attr("fill", filteredData[0].color) // set the fill color of the area
-    .attr("fill-opacity", 0.5) // set the opacity of the area fill
-    .attr("stroke", "none") // remove the stroke from the area
-    .transition()
-    .duration(1000)
-    .attr("d", d3.area()
-      .x(d => xScale(d.year)) // set the x-axis position
-      .y0(yScale.range()[0]) // set the starting y-axis position
-      .y1(d => yScale(d.population)) // set the ending y-axis position based on the value
-    )
 
  
 

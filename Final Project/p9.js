@@ -1,19 +1,12 @@
-/* CONSTANTS AND GLOBALS */
 const width = 700,
   height = 600,
   margin = { top: (window.innerHeight - height) / 2, bottom: 50, left: 20, right: (window.innerWidth - width) / 2 },
   radius = 15;
 
-/*
-this extrapolated function allows us to replace the "G" with "B" min the case of billions.
-we cannot do this in the .tickFormat() because we need to pass a function as an argument,
-and replace needs to act on the text (result of the function).
-*/
+
 const formatBillions = (num) => d3.format(".2s")(num).replace(/G/, 'B')
 const formatDate = d3.timeFormat("%Y")
 
-// these variables allow us to access anything we manipulate in init() but need access to in draw().
-// All these variables are empty before we assign something to them.
 let svg;
 let xScale;
 let yScale;
@@ -21,15 +14,15 @@ let yAxis;
 let xAxisGroup;
 let yAxisGroup;
 
-/* APPLICATION STATE */
+
 let state = {
   data: [],
-  selection: "All", // + YOUR FILTER SELECTION
+  selection: "All", 
 };
 
 /* LOAD DATA */
 // + SET YOUR DATA PATH
-d3.csv('../data/HongKongersInUSOver10year-color.csv', d => {
+d3.csv('../data/INDUSTRY-color.csv', d => {
   // use custom initializer to reformat the data the way we want it
   // ref: https://github.com/d3/d3-fetch#dsv
   return {

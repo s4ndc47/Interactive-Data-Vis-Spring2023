@@ -1,7 +1,7 @@
 /* CONSTANTS AND GLOBALS */
-const width = 700,
-  height = 600,
-  margin = { top: (window.innerHeight - height) / 2, bottom: 50, left: 20, right: (window.innerWidth - width) / 2 },
+const width = 800,
+  height = 700,
+  margin = { top: (window.innerHeight - height) / 2, bottom: (window.innerHeight - height) / 2, left: (window.innerWidth - width) / 2, right: (window.innerWidth - width) / 2 },
   radius = 15;
 
 /*
@@ -59,7 +59,7 @@ function init() {
 
   // + AXES
   const xAxis = d3.axisBottom(xScale)
-    .ticks(8) // limit the number of tick marks showing -- note: this is approximate
+    .ticks(6) // limit the number of tick marks showing -- note: this is approximate
   yAxis = d3.axisLeft(yScale)
     .tickFormat(formatBillions)
 
@@ -94,7 +94,6 @@ function init() {
   xAxisGroup = svg.append("g")
     .attr("class", "xAxis")
     .attr("transform", `translate(${0}, ${height - margin.bottom})`)
-    .style("fill", "white")
     .call(xAxis)
 
   xAxisGroup.append("text")
@@ -126,7 +125,7 @@ function draw() {
   console.log('filtered data: ' , filteredData)
 
   const TotalPopulationData = state.data
-    .filter(d => d.country === 'Total Population')
+  .filter(d => d.country === 'Total Population')
 
   console.log('TotalPopulation:' , TotalPopulationData)
 
@@ -152,39 +151,15 @@ function draw() {
     .x(d => xScale(d.year))
     .y(d => yScale(d.population))
 
-  const dot = svg.append("circle")
-    .attr("r", 8)
-    .attr("fill", "black")
-    .style("display", "none");
-
+    
   // + DRAW LINE 
   svg.selectAll(".line")
-    .data([filteredData])
+    .data([filteredData]) // data needs to take an []
     .join("path")
     .attr("class", 'line')
     .attr("fill", "none")
     .attr("stroke-width", 3)
     .attr("stroke", filteredData[0].color)
-    .on("mouseover", (event, d) => {
-      console.log(d)
-      const [x, y] = d3.pointer(event);
-      console.log(event)
-      const population = yScale.invert(y)
-      const year = xScale.invert(x)
-      tooltip
-        .html(`${Math.round(population)}`)
-        .style("display", "block")
-        .style("left",`${event.pageX + 10}px`)
-        .style("top",`${event.pageY - 20}px`)
-      dot
-        .attr("cx", x)
-        .attr("cy", y)
-        .style("display", "block");
-    })
-    .on("mouseout", () => {
-      tooltip.style("display", "none");
-      dot.style("display", "none");
-    })
     .transition()
     .duration(1000)
     .attr("d", d => lineGen(d))
@@ -207,7 +182,5 @@ function draw() {
     )
 
  
-
-
+    
 }
-

@@ -1,0 +1,141 @@
+Entity,Type,Year,Population
+Civilian employed population 16 years and over,grey,2011,144087
+Civilian employed population 16 years and over,grey,2012,148687
+Civilian employed population 16 years and over,grey,2013,147661
+Civilian employed population 16 years and over,grey,2014,157511
+Civilian employed population 16 years and over,grey,2015,151629
+Civilian employed population 16 years and over,grey,2016,140570
+Civilian employed population 16 years and over,grey,2017,148368
+Civilian employed population 16 years and over,grey,2018,150551
+Civilian employed population 16 years and over,grey,2019,146448
+Civilian employed population 16 years and over,grey,2021,151712
+"Agriculture, forestry, fishing and hunting, and mining",#cccc33,2011,288
+"Agriculture, forestry, fishing and hunting, and mining",#cccc33,2012,595
+"Agriculture, forestry, fishing and hunting, and mining",#cccc33,2013,1624
+"Agriculture, forestry, fishing and hunting, and mining",#cccc33,2014,315
+"Agriculture, forestry, fishing and hunting, and mining",#cccc33,2015,303
+"Agriculture, forestry, fishing and hunting, and mining",#cccc33,2016,281
+"Agriculture, forestry, fishing and hunting, and mining",#cccc33,2017,297
+"Agriculture, forestry, fishing and hunting, and mining",#cccc33,2018,301
+"Agriculture, forestry, fishing and hunting, and mining",#cccc33,2019,586
+"Agriculture, forestry, fishing and hunting, and mining",#cccc33,2021,152
+Construction,#cccc33,2011,2305
+Construction,#cccc33,2012,2379
+Construction,#cccc33,2013,2510
+Construction,#cccc33,2014,2835
+Construction,#cccc33,2015,2729
+Construction,#cccc33,2016,3093
+Construction,#cccc33,2017,2967
+Construction,#cccc33,2018,3764
+Construction,#cccc33,2019,3075
+Construction,#cccc33,2021,3489
+Manufacturing,#cccc33,2011,16426
+Manufacturing,#cccc33,2012,17842
+Manufacturing,#cccc33,2013,16095
+Manufacturing,#cccc33,2014,17326
+Manufacturing,#cccc33,2015,15315
+Manufacturing,#cccc33,2016,14619
+Manufacturing,#cccc33,2017,177062
+Manufacturing,#cccc33,2018,15055
+Manufacturing,#cccc33,2019,14059
+Manufacturing,#cccc33,2021,15626
+Wholesale trade,#cccc33,2011,5763
+Wholesale trade,#cccc33,2012,4907
+Wholesale trade,#cccc33,2013,4577
+Wholesale trade,#cccc33,2014,6458
+Wholesale trade,#cccc33,2015,7581
+Wholesale trade,#cccc33,2016,5342
+Wholesale trade,#cccc33,2017,4896
+Wholesale trade,#cccc33,2018,6925
+Wholesale trade,#cccc33,2019,5419
+Wholesale trade,#cccc33,2021,4096
+Retail trade,#cccc33,2011,13688
+Retail trade,#cccc33,2012,12638
+Retail trade,#cccc33,2013,12108
+Retail trade,#cccc33,2014,11656
+Retail trade,#cccc33,2015,13192
+Retail trade,#cccc33,2016,9418
+Retail trade,#cccc33,2017,13353
+Retail trade,#cccc33,2018,10087
+Retail trade,#cccc33,2019,12155
+Retail trade,#cccc33,2021,10013
+"Transportation and warehousing, and utilities",#cccc33,2011,7781
+"Transportation and warehousing, and utilities",#cccc33,2012,8029
+"Transportation and warehousing, and utilities",#cccc33,2013,7531
+"Transportation and warehousing, and utilities",#cccc33,2014,11026
+"Transportation and warehousing, and utilities",#cccc33,2015,8188
+"Transportation and warehousing, and utilities",#cccc33,2016,8575
+"Transportation and warehousing, and utilities",#cccc33,2017,9050
+"Transportation and warehousing, and utilities",#cccc33,2018,10087
+"Transportation and warehousing, and utilities",#cccc33,2019,7908
+"Transportation and warehousing, and utilities",#cccc33,2021,8041
+Information,#cccc33,2011,3458
+Information,#cccc33,2012,4609
+Information,#cccc33,2013,5020
+Information,#cccc33,2014,5040
+Information,#cccc33,2015,5762
+Information,#cccc33,2016,4639
+Information,#cccc33,2017,5490
+Information,#cccc33,2018,4366
+Information,#cccc33,2019,4979
+Information,#cccc33,2021,5462
+"Finance and insurance, and real estate and rental and leasing",#cccc33,2011,15994
+"Finance and insurance, and real estate and rental and leasing",#cccc33,2012,19329
+"Finance and insurance, and real estate and rental and leasing",#cccc33,2013,16981
+"Finance and insurance, and real estate and rental and leasing",#cccc33,2014,20791
+"Finance and insurance, and real estate and rental and leasing",#cccc33,2015,15163
+"Finance and insurance, and real estate and rental and leasing",#cccc33,2016,17290
+"Finance and insurance, and real estate and rental and leasing",#cccc33,2017,15875
+"Finance and insurance, and real estate and rental and leasing",#cccc33,2018,19421
+"Finance and insurance, and real estate and rental and leasing",#cccc33,2019,16988
+"Finance and insurance, and real estate and rental and leasing",#cccc33,2021,19267
+"Professional, scientific, and management, and administrative and waste management services",#cccc33,2011,23054
+"Professional, scientific, and management, and administrative and waste management services",#cccc33,2012,2242
+"Professional, scientific, and management, and administrative and waste management services",#cccc33,2013,22001
+"Professional, scientific, and management, and administrative and waste management services",#cccc33,2014,25359
+"Professional, scientific, and management, and administrative and waste management services",#cccc33,2015,23806
+"Professional, scientific, and management, and administrative and waste management services",#cccc33,2016,24319
+"Professional, scientific, and management, and administrative and waste management services",#cccc33,2017,23887
+"Professional, scientific, and management, and administrative and waste management services",#cccc33,2018,23185
+"Professional, scientific, and management, and administrative and waste management services",#cccc33,2019,25482
+"Professional, scientific, and management, and administrative and waste management services",#cccc33,2021,28218
+"Educational services, and health care and social assistance",#cccc33,2011,28817
+"Educational services, and health care and social assistance",#cccc33,2012,28102
+"Educational services, and health care and social assistance",#cccc33,2013,29828
+"Educational services, and health care and social assistance",#cccc33,2014,29612
+"Educational services, and health care and social assistance",#cccc33,2015,31690
+"Educational services, and health care and social assistance",#cccc33,2016,29660
+"Educational services, and health care and social assistance",#cccc33,2017,30712
+"Educational services, and health care and social assistance",#cccc33,2018,32067
+"Educational services, and health care and social assistance",#cccc33,2019,28264
+"Educational services, and health care and social assistance",#cccc33,2021,32163
+"Arts, entertainment, and recreation, and accommodation and food services",#cccc33,2011,14697
+"Arts, entertainment, and recreation, and accommodation and food services",#cccc33,2012,15315
+"Arts, entertainment, and recreation, and accommodation and food services",#cccc33,2013,15504
+"Arts, entertainment, and recreation, and accommodation and food services",#cccc33,2014,15121
+"Arts, entertainment, and recreation, and accommodation and food services",#cccc33,2015,14101
+"Arts, entertainment, and recreation, and accommodation and food services",#cccc33,2016,12511
+"Arts, entertainment, and recreation, and accommodation and food services",#cccc33,2017,12018
+"Arts, entertainment, and recreation, and accommodation and food services",#cccc33,2018,13550
+"Arts, entertainment, and recreation, and accommodation and food services",#cccc33,2019,13620
+"Arts, entertainment, and recreation, and accommodation and food services",#cccc33,2021,11985
+Other services (except public administration),#cccc33,2011,4755
+Other services (except public administration),#cccc33,2012,5055
+Other services (except public administration),#cccc33,2013,5463
+Other services (except public administration),#cccc33,2014,5040
+Other services (except public administration),#cccc33,2015,6055
+Other services (except public administration),#cccc33,2016,4639
+Other services (except public administration),#cccc33,2017,4748
+Other services (except public administration),#cccc33,2018,4366
+Other services (except public administration),#cccc33,2019,6444
+Other services (except public administration),#cccc33,2021,5765
+Public administration,#cccc33,2011,7060
+Public administration,#cccc33,2012,7286
+Public administration,#cccc33,2013,8712
+Public administration,#cccc33,2014,6930
+Public administration,#cccc33,2015,7885
+Public administration,#cccc33,2016,6185
+Public administration,#cccc33,2017,8160
+Public administration,#cccc33,2018,7226
+Public administration,#cccc33,2019,7615
+Public administration,#cccc33,2021,7434
