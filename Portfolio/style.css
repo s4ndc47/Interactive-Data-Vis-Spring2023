@@ -1,0 +1,125 @@
+html {
+  width: 900px;
+  height: 900px;
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+  overflow: hidden; /* to hide any content that might extend beyond the window */
+}
+
+body {
+  font-family: 'Libre Caslon Text', serif;
+  font-size: 16px;
+  padding: 1em;
+  text-align:Left;
+  width: 900px;
+  height: 900px;
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+  overflow: hidden; /* to hide any content that might extend beyond the window */
+}
+
+#BG {
+  margin-top: 25px;
+}
+
+.image-button {
+  position: relative;
+  display: inline-block;
+}
+
+.image-button img {
+  display: block;
+}
+
+.image-button .hover-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #cccc33;
+  opacity: 0;
+}
+
+.image-button:hover .hover-effect {
+  opacity: 0.3;
+}
+
+.image-button:hover img {
+  filter: brightness(90%);
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+h1 {
+  font-family: 'Libre Caslon Text', serif;
+  font-family: 'Merriweather', serif;
+  font-size: 3em;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  text-align:center;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  text-align:Left;
+}
+
+
+h5 {
+  font-size: 1em;
+  color: #9a9a9a;
+  text-align:center;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  color: #8e8e8e;
+  text-align:center;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+}
+
+.Leftbutton {
+  background-image: url('https://static.thenounproject.com/attribution/2309932-600.png');
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#DataSource {
+  position: absolute;;
+  bottom: 0;
+  font-size: xx-small;
+  color:#cccccc;
+}
+
+
